@@ -13,6 +13,24 @@ target/
 .springBeans
 .sts4-cache
 
+# Binários e dependências
+*.jar
+*.war
+*.ear
+node_modules/
+
+# Configuração sensível
+application.properties
+application.yml
+.env
+secrets/
+
+# Cache e logs
+logs/
+*.log
+.DS_Store
+Thumbs.db
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

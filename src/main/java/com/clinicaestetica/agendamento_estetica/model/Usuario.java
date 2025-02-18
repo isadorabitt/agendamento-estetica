@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+
+import java.util.Collection;
 
 @Data
 @NoArgsConstructor
@@ -24,4 +27,11 @@ public class Usuario {
 
     @Column(nullable = false)
     private String senha;
+
+    public Usuario(String email, String nome, String senhaCodificada) {
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return java.util.List.of();
+    }
 }
